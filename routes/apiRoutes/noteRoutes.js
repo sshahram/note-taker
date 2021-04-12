@@ -3,7 +3,7 @@
 const router = require('express').Router();
 const {createNewNotes} = require('../../lib/notes');
 // for id creation
-import { nanoid } from 'nanoid';
+const shortid = require('shortid');
 
 const {notes} = require('../../db/db.json');
 
@@ -16,9 +16,10 @@ router.get('/notes', (req, res) => {
 // post request to add data to the server
 router.post('/notes', (req, res) => {
     // set id based on what the next index of the arra will be
-    req.body.id = nanoid();
+    req.body.id = shortid.generate();
     const note = createNewNotes(req.body, notes);
     res.json(note);
 });
 
 // export the router
+module.exports = router;
