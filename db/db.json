@@ -1,11 +1,6 @@
 {
   "notes": [
     {
-      "id": "1",
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
       "title": "important",
       "text": "hello",
       "id": "nklgvWVxI"
@@ -14,6 +9,11 @@
       "title": "KPI",
       "text": "meeting on friday",
       "id": "fkhGf86tj"
+    },
+    {
+      "title": "test",
+      "text": "test",
+      "id": "uVPmRZHcI"
     }
   ]
 }

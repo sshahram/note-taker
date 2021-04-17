@@ -2,10 +2,13 @@
 // start an instance of Router
 const router = require('express').Router();
 const {createNewNotes} = require('../../lib/notes');
+const fs = require('fs');
+const path = require('path');
+
 // for id creation
 const shortid = require('shortid');
 
-const {notes} = require('../../db/db.json');
+let {notes} = require('../../db/db.json');
 
 // route to get saved notes
 router.get('/notes', (req, res) => {
@@ -19,6 +22,13 @@ router.post('/notes', (req, res) => {
     req.body.id = shortid.generate();
     const note = createNewNotes(req.body, notes);
     res.json(note);
+});
+
+// delete route
+router.delete('/notes/:id', (req, res) => {
+    notes = notes.filter(note => note.id !== req.params.id);
+    fs.writeFileSync(path.join(__dirname, '../../db/db.json'), JSON.stringify({notes}, null, 2));
+    res.json(notes);
 });
 
 // export the router
