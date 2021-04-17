@@ -1,4 +1,4 @@
-# Note Taker
+# Note Taker App
 
 ![GitHub license badge](https://img.shields.io/badge/license-MIT-blue.svg)
 
@@ -23,7 +23,6 @@ Please first install node.js and then run the following commands into your termi
 git clone <from-repository-on-github>
 npm install
 npm start
-
 ```
 ## License
 Please see the following link for license information: 
@@ -37,7 +36,7 @@ Please see below for the snapshots of two pages of note taker app:
 
 * Main Page
 
-![alt=note-taker-mainPage](./utils/images/mainPage.png)
+![alt=note-taker-mainPage](./utils/images/mainPage.PNG)
 
 * Notes Page
 
